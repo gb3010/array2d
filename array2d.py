@@ -24,12 +24,15 @@ print("Sum is:",c)
 print(); */
 #hourglass(H,2,2)'''
 
-e = [[],[]]
+
+e = [ [ 0 for r in range(0,2)] for col in range(0,2)]
+print(e[0][0])
 for i in range(1,3):
     for j in range(1,3):
         d = hourglass(H,i,j)
         e[i-1][j-1] = d
         print(d)
+        
 
 print(e)
         
