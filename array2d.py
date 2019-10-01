@@ -24,13 +24,13 @@ print("Sum is:",c)
 print(); */
 #hourglass(H,2,2)'''
 
-e = [][]
+#e = [][]
 for i in range(1,3):
     for j in range(1,3):
         d = hourglass(H,i,j)
-        e[i-1][j-1].append(d)
+       # e[i-1][j-1].append(d)
         print(d)
 
-print(e)
+#print(e)
         
 
