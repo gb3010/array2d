@@ -30,7 +30,7 @@ print(e[0][0])
 for i in range(1,3):
     for j in range(1,3):
         d = hourglass(H,i,j)
-        e[i-1][j-1] = d
+        e[i-1][j-1] = int(d)
         print(d)
         
 
