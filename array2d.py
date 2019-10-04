@@ -2,7 +2,7 @@
 H=[
     [1,2,3,4],
     [5,6,7,8],
-    [9,10,11,12],
+    [9,10,33,12],
     [13,14,15,16]
     ]
 #i=1;j=1
@@ -24,16 +24,17 @@ print("Sum is:",c)
 print(); */
 #hourglass(H,2,2)'''
 
-
-e = [ [ 0 for r in range(0,2)] for col in range(0,2)]
-print(e[0][0])
+s = [] # Empty single dimensional list
+#e = [ [ 0 for r in range(0,2)] for col in range(0,2)]
+#print(e[0][0])
 for i in range(1,3):
     for j in range(1,3):
         d = hourglass(H,i,j)
-        e[i-1][j-1] = int(d)
-        print(d)
-        
+       # e[i-1][j-1] = int(d)
+        #print(d)
+        s.append(int(d))
 
-print(e)
+print(s)
+
         
 
