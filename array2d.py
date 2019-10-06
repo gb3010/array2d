@@ -36,5 +36,12 @@ for i in range(1,3):
 
 print(s)
 
+n = len(s)
+for i in range(n):
+    for j in range(n-i-1):
+        if s[j] < s[j+1]:
+            s[j],s[j+1] = s[j+1],s[j]
+
+print(s[0])
         
 
