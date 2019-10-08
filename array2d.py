@@ -14,35 +14,30 @@ for _ in range(6):
 
 
 
-def hourglass(a,i,j): # The hourglass function
+def hourglassSum(a): # The hourglass function
     
     sum = int(0)
+    sum_arr = []
+
+    for i in range(1,5):
+        for j in range(1,5):
+            for p in a[i-1][j-1],a[i-1][j],a[i-1][j+1],a[i][j],a[i+1][j-1],a[i+1][j],a[i+1][j+1]:
+                sum += p  # iterating over the hourglass 
+                sum_arr.append(sum)
+                sum = 0 
+
     
-    for p in a[i-1][j-1],a[i-1][j],a[i-1][j+1],a[i][j],a[i+1][j-1],a[i+1][j],a[i+1][j+1]:  # iterating over the hourglass 
-        sum += p
-
-    return sum
-
-
-s = [] # Empty single dimensional list
-
-for i in range(1,5):
-    for j in range(1,5):
-        d = hourglass(H,i,j)
-     
-        s.append(int(d))
-
-#print(s) #Printing the list with sum values
+    n = len(sum_arr)
+    for i in range(n): 
+        for j in range(n-i-1):
+            if sum_arr[j] < sum_arr[j+1]:
+                sum_arr[j],sum_arr[j+1] = sum_arr[j+1],sum_arr[j]
 
 
-#Bubble sorting the array with sum of hourglasses in descending order 
-n = len(s)
-for i in range(n):
-    for j in range(n-i-1):
-        if s[j] < s[j+1]:
-            s[j],s[j+1] = s[j+1],s[j]
+    return sum_arr[0]
+    
+g = hourglassSum(H)
+print(g)
 
-#Printing the maximum of sum
-print(s[0])
         
 
