@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-H=[
+H = []
+for _ in range(6):
+        H.append(list(map(int, input().rstrip().split())))
+
+
+#print(H)
+'''H=[
     [1,2,3,4],
     [5,6,7,8],
     [9,10,33,12],
     [13,14,15,16]
-    ]
+    ]'''
 
 
 
@@ -20,12 +26,13 @@ def hourglass(a,i,j): # The hourglass function
 
 s = [] # Empty single dimensional list
 
-for i in range(1,3):
-    for j in range(1,3):
+for i in range(1,5):
+    for j in range(1,5):
         d = hourglass(H,i,j)
      
         s.append(int(d))
 
+#print(s) #Printing the list with sum values
 
 
 #Bubble sorting the array with sum of hourglasses in descending order 
